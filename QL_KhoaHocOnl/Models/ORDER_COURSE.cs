@@ -14,9 +14,9 @@ namespace QL_KhoaHocOnl.Models
     
     public partial class ORDER_COURSE
     {
-        public string MA_ORDER { get; set; }
-        public string MA_COURSE { get; set; }
-        public string MA_USER { get; set; }
+        public string ID_ORDER { get; set; }
+        public string ID_COURSE { get; set; }
+        public string ID_USER { get; set; }
         public string STATUS_ORDER { get; set; }
         public System.DateTime TIME_AT_ORDER { get; set; }
     

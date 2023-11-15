@@ -17,13 +17,14 @@ namespace QL_KhoaHocOnl.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public USER_COURSE()
         {
+            this.ARTICLEs = new HashSet<ARTICLE>();
             this.CART_OF_USER = new HashSet<CART_OF_USER>();
-            this.FEEDBACK = new HashSet<FEEDBACK>();
-            this.GRADES = new HashSet<GRADES>();
+            this.FEEDBACKs = new HashSet<FEEDBACK>();
+            this.GRADES = new HashSet<GRADE>();
             this.ORDER_COURSE = new HashSet<ORDER_COURSE>();
         }
     
-        public string MA_USER { get; set; }
+        public string ID_USER { get; set; }
         public string FULLNAME_USER { get; set; }
         public int NUMBER_OF_COURSE { get; set; }
         public string EMAIL_USER { get; set; }
@@ -32,11 +33,13 @@ namespace QL_KhoaHocOnl.Models
         public string STATUS_USER { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ARTICLE> ARTICLEs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CART_OF_USER> CART_OF_USER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FEEDBACK> FEEDBACK { get; set; }
+        public virtual ICollection<FEEDBACK> FEEDBACKs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GRADES> GRADES { get; set; }
+        public virtual ICollection<GRADE> GRADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ORDER_COURSE> ORDER_COURSE { get; set; }
     }

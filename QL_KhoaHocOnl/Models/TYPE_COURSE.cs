@@ -17,13 +17,14 @@ namespace QL_KhoaHocOnl.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TYPE_COURSE()
         {
-            this.COURSE = new HashSet<COURSE>();
+            this.COURSEs = new HashSet<COURSE>();
         }
     
-        public string MA_TYPECOURSE { get; set; }
-        public string TEN_TYPECOURSE { get; set; }
+        public string ID_TYPECOURSE { get; set; }
+        public string NAME_TYPECOURSE { get; set; }
+        public string THUMBNAIL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COURSE> COURSE { get; set; }
+        public virtual ICollection<COURSE> COURSEs { get; set; }
     }
 }
