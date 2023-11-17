@@ -20,8 +20,9 @@ namespace QL_KhoaHocOnl.Models
             this.COURSE = new HashSet<COURSE>();
         }
     
-        public string MA_TYPECOURSE { get; set; }
-        public string TEN_TYPECOURSE { get; set; }
+        public string ID_TYPECOURSE { get; set; }
+        public string NAME_TYPECOURSE { get; set; }
+        public string THUMBNAIL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<COURSE> COURSE { get; set; }

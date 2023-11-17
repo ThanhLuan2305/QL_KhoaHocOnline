@@ -15,8 +15,8 @@ namespace QL_KhoaHocOnl.Models
     public partial class GRADES
     {
         public string GRADEID { get; set; }
-        public string MA_USER { get; set; }
-        public string MA_COURSE { get; set; }
+        public int ID_USER { get; set; }
+        public string ID_COURSE { get; set; }
         public string ASSIGNMENTID { get; set; }
         public string QUIZID { get; set; }
         public Nullable<double> GRADE { get; set; }

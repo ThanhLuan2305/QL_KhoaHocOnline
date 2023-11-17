@@ -17,24 +17,27 @@ namespace QL_KhoaHocOnl.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public USER_COURSE()
         {
+            this.ARTICLE = new HashSet<ARTICLE>();
             this.CART_OF_USER = new HashSet<CART_OF_USER>();
-            this.FEEDBACK = new HashSet<FEEDBACK>();
             this.GRADES = new HashSet<GRADES>();
             this.ORDER_COURSE = new HashSet<ORDER_COURSE>();
         }
     
-        public string MA_USER { get; set; }
+        public int ID_USER { get; set; }
         public string FULLNAME_USER { get; set; }
-        public int NUMBER_OF_COURSE { get; set; }
+        public string PASSWORD { get; set; }
+        public string USERNAME { get; set; }
+        public Nullable<System.DateTime> BIRTHDAY { get; set; }
+        public Nullable<int> NUMBER_OF_COURSE { get; set; }
         public string EMAIL_USER { get; set; }
         public string PHONE_USER { get; set; }
         public string ROLE_USER { get; set; }
         public string STATUS_USER { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CART_OF_USER> CART_OF_USER { get; set; }
+        public virtual ICollection<ARTICLE> ARTICLE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FEEDBACK> FEEDBACK { get; set; }
+        public virtual ICollection<CART_OF_USER> CART_OF_USER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GRADES> GRADES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

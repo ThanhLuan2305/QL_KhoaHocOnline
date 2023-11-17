@@ -14,8 +14,8 @@ namespace QL_KhoaHocOnl.Models
     
     public partial class CART_OF_USER
     {
-        public string MA_USER { get; set; }
-        public string MA_COURSE { get; set; }
+        public int ID_USER { get; set; }
+        public string ID_COURSE { get; set; }
     
         public virtual USER_COURSE USER_COURSE { get; set; }
     }

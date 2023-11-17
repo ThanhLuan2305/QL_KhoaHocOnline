@@ -15,13 +15,12 @@ namespace QL_KhoaHocOnl.Models
     public partial class FEEDBACK
     {
         public string FEEDBACKID { get; set; }
-        public string MA_USER { get; set; }
-        public string MA_COURSE { get; set; }
+        public int ID_USER { get; set; }
+        public string ID_ORDER { get; set; }
         public System.DateTime DATE_FEEDBACK { get; set; }
-        public string TITLE_FEEDBACK { get; set; }
-        public string TEXT_FEEDBACK { get; set; }
+        public string CONTENT_FEEDBACK { get; set; }
         public Nullable<int> RATE_FEEDBACK { get; set; }
     
-        public virtual USER_COURSE USER_COURSE { get; set; }
+        public virtual ORDER_COURSE ORDER_COURSE { get; set; }
     }
 }

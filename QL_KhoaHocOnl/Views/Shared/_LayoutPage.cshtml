@@ -4,73 +4,72 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Site Metas -->
+    <title>SmartEDU - Education Responsive HTML5 Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="stylesheet" href="~/Assets/css/animate.css">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="~/Assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="~/Assets/images/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="~/Assets/css/magnific-popup.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Assets/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="~/Assets/style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="~/Assets/css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Assets/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Assets/css/custom.css">
 
-    <link rel="stylesheet" href="~/Assets/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="~/Assets/css/jquery.timepicker.css">
-
-
-    <link rel="stylesheet" href="~/Assets/css/flaticon.css">
-    <link rel="stylesheet" href="~/Assets/css/style.css">
+    <!-- Modernizer for Portfolio -->
+    <script src="~/Assets/js/modernizer.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 </head>
 <body>
-    <!-- END nav -->
-    @RenderPage("~/Views/Shared/Nav.cshtml")
-    <div class="hero-wrap js-fullheight" style="background-image: url('/Assets/images/bg_1.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-                <div class="col-md-7 ftco-animate">
-                    <span class="subheading">Welcome to StudyLab</span>
-                    <h1 class="mb-4">We Are Online Platform For Make Learn</h1>
-                    <p class="caps">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                    <p class="mb-0"><a href="#" class="btn btn-primary">Our Course</a> <a href="#" class="btn btn-white">Learn More</a></p>
-                </div>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
             </div>
         </div>
     </div>
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7"></div>
-                <div class="col-md-5 order-md-last">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- END LOADER -->
+    <!-- Start header -->
+    @RenderPage("~/Views/Shared/Header.cshtml")
+    <!-- END HEADER -->
+
     <div>
         @RenderBody()
     </div>
     <!--Footer-->
     @RenderPage("~/Views/Shared/Footer.cshtml")
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+    <!--End Footer-->
 
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
-    <script src="~/Assets/js/jquery.min.js"></script>
-    <script src="~/Assets/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="~/Assets/js/popper.min.js"></script>
-    <script src="~/Assets/js/bootstrap.min.js"></script>
-    <script src="~/Assets/js/jquery.easing.1.3.js"></script>
-    <script src="~/Assets/js/jquery.waypoints.min.js"></script>
-    <script src="~/Assets/js/jquery.stellar.min.js"></script>
-    <script src="~/Assets/js/owl.carousel.min.js"></script>
-    <script src="~/Assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/Assets/js/jquery.animateNumber.min.js"></script>
-    <script src="~/Assets/js/bootstrap-datepicker.js"></script>
-    <script src="~/Assets/js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="~/Assets/js/google-map.js"></script>
-    <script src="~/Assets/js/main.js"></script>
-
+    <!-- ALL JS FILES -->
+    <script src="~/Assets/js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="~/Assets/js/custom.js"></script>
+    <script src="~/Assets/js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
 </body>
 </html>
+
 

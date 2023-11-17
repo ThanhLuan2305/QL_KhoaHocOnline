@@ -14,13 +14,21 @@ namespace QL_KhoaHocOnl.Models
     
     public partial class ORDER_COURSE
     {
-        public string MA_ORDER { get; set; }
-        public string MA_COURSE { get; set; }
-        public string MA_USER { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ORDER_COURSE()
+        {
+            this.FEEDBACK = new HashSet<FEEDBACK>();
+        }
+    
+        public string ID_ORDER { get; set; }
+        public string ID_COURSE { get; set; }
+        public int ID_USER { get; set; }
         public string STATUS_ORDER { get; set; }
         public System.DateTime TIME_AT_ORDER { get; set; }
     
         public virtual COURSE COURSE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FEEDBACK> FEEDBACK { get; set; }
         public virtual USER_COURSE USER_COURSE { get; set; }
     }
 }

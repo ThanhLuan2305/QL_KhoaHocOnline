@@ -17,15 +17,15 @@ namespace QL_KhoaHocOnl.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public COURSE()
         {
-            this.ASSIGNMENTS = new HashSet<ASSIGNMENTS>();
             this.GRADES = new HashSet<GRADES>();
+            this.LESSON = new HashSet<LESSON>();
             this.QUIZZES = new HashSet<QUIZZES>();
             this.ORDER_COURSE = new HashSet<ORDER_COURSE>();
         }
     
-        public string MA_COURSE { get; set; }
-        public string MA_TYPECOURSE { get; set; }
-        public string MA_GIANGVIEN { get; set; }
+        public string ID_COURSE { get; set; }
+        public string ID_TYPECOURSE { get; set; }
+        public string ID_TEACHER { get; set; }
         public string NAME_COURSE { get; set; }
         public string DESCRIPTION_COURSE { get; set; }
         public double PRICE_COURSE { get; set; }
@@ -33,15 +33,15 @@ namespace QL_KhoaHocOnl.Models
         public string THUMBNAIL { get; set; }
         public int COUNT_LESSON_COURSE { get; set; }
         public string LEVEL_COURSE { get; set; }
-        public System.DateTime CREATED_AT_COURSE { get; set; }
-        public System.DateTime UPDATE_AT_COURSE { get; set; }
+        public Nullable<System.DateTime> CREATED_AT_COURSE { get; set; }
+        public Nullable<System.DateTime> UPDATE_AT_COURSE { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ASSIGNMENTS> ASSIGNMENTS { get; set; }
-        public virtual GIANGVIEN GIANGVIEN { get; set; }
+        public virtual TEACHER TEACHER { get; set; }
         public virtual TYPE_COURSE TYPE_COURSE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GRADES> GRADES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LESSON> LESSON { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QUIZZES> QUIZZES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -69,6 +69,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Validate, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validate.1.0.3\lib\net452\Validate.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -97,74 +100,132 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\css\ajax-loader.gif" />
     <Content Include="Assets\css\animate.css" />
-    <Content Include="Assets\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\css\animate.min.css" />
+    <Content Include="Assets\css\bootstrap-touch-slider.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
-    <Content Include="Assets\css\bootstrap\bootstrap-grid.css" />
-    <Content Include="Assets\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Assets\css\colors.css" />
+    <Content Include="Assets\css\custom.css" />
     <Content Include="Assets\css\flaticon.css" />
-    <Content Include="Assets\css\jquery.timepicker.css" />
-    <Content Include="Assets\css\magnific-popup.css" />
-    <Content Include="Assets\css\owl.carousel.min.css" />
-    <Content Include="Assets\css\owl.theme.default.min.css" />
-    <Content Include="Assets\css\style.css" />
-    <Content Include="Assets\fonts\flaticon\backup.txt" />
-    <Content Include="Assets\fonts\flaticon\font\flaticon.css" />
-    <Content Include="Assets\fonts\flaticon\font\flaticon.html" />
-    <Content Include="Assets\fonts\flaticon\font\Flaticon.svg" />
-    <Content Include="Assets\images\about-1.jpg" />
-    <Content Include="Assets\images\about.jpg" />
-    <Content Include="Assets\images\bg_1.jpg" />
-    <Content Include="Assets\images\bg_2.jpg" />
-    <Content Include="Assets\images\bg_3.jpg" />
-    <Content Include="Assets\images\bg_4.jpg" />
-    <Content Include="Assets\images\image_1.jpg" />
-    <Content Include="Assets\images\image_2.jpg" />
-    <Content Include="Assets\images\image_3.jpg" />
-    <Content Include="Assets\images\image_4.jpg" />
-    <Content Include="Assets\images\image_5.jpg" />
-    <Content Include="Assets\images\image_6.jpg" />
-    <Content Include="Assets\images\loc.png" />
-    <Content Include="Assets\images\person_1.jpg" />
-    <Content Include="Assets\images\person_2.jpg" />
-    <Content Include="Assets\images\person_3.jpg" />
-    <Content Include="Assets\images\person_4.jpg" />
-    <Content Include="Assets\images\teacher-1.jpg" />
-    <Content Include="Assets\images\teacher-10.jpg" />
-    <Content Include="Assets\images\teacher-2.jpg" />
-    <Content Include="Assets\images\teacher-3.jpg" />
-    <Content Include="Assets\images\teacher-4.jpg" />
-    <Content Include="Assets\images\teacher-5.jpg" />
-    <Content Include="Assets\images\teacher-6.jpg" />
-    <Content Include="Assets\images\teacher-7.jpg" />
-    <Content Include="Assets\images\teacher-8.jpg" />
-    <Content Include="Assets\images\teacher-9.jpg" />
-    <Content Include="Assets\images\work-1.jpg" />
-    <Content Include="Assets\images\work-2.jpg" />
-    <Content Include="Assets\images\work-3.jpg" />
-    <Content Include="Assets\images\work-4.jpg" />
-    <Content Include="Assets\images\work-5.jpg" />
-    <Content Include="Assets\images\work-6.jpg" />
-    <Content Include="Assets\images\work-7.jpg" />
-    <Content Include="Assets\images\work-8.jpg" />
-    <Content Include="Assets\images\work-9.jpg" />
-    <Content Include="Assets\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\css\font-awesome.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\prettyPhoto.css" />
+    <Content Include="Assets\css\pr_loading.css" />
+    <Content Include="Assets\css\responsive.css" />
+    <Content Include="Assets\css\timeline.min.css" />
+    <Content Include="Assets\css\versions.css" />
+    <Content Include="Assets\fonts\flaticon.css" />
+    <Content Include="Assets\fonts\Flaticon.svg" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\images\about_02.jpg" />
+    <Content Include="Assets\images\about_03.jpg" />
+    <Content Include="Assets\images\ajax-loader.gif" />
+    <Content Include="Assets\images\apple-touch-icon.png" />
+    <Content Include="Assets\images\arrow-left.svg" />
+    <Content Include="Assets\images\arrow-right.svg" />
+    <Content Include="Assets\images\author.jpg" />
+    <Content Include="Assets\images\avatar-01.jpg" />
+    <Content Include="Assets\images\avatar-02.jpg" />
+    <Content Include="Assets\images\avatar-03.jpg" />
+    <Content Include="Assets\images\banner.jpg" />
+    <Content Include="Assets\images\bg.png" />
+    <Content Include="Assets\images\blog_1.jpg" />
+    <Content Include="Assets\images\blog_2.jpg" />
+    <Content Include="Assets\images\blog_3.jpg" />
+    <Content Include="Assets\images\blog_4.jpg" />
+    <Content Include="Assets\images\blog_5.jpg" />
+    <Content Include="Assets\images\blog_6.jpg" />
+    <Content Include="Assets\images\blog_single.jpg" />
+    <Content Include="Assets\images\favicon.ico" />
+    <Content Include="Assets\images\img-01.jpg" />
+    <Content Include="Assets\images\img-02.jpg" />
+    <Content Include="Assets\images\img-03.jpg" />
+    <Content Include="Assets\images\img-04.jpg" />
+    <Content Include="Assets\images\logo.png" />
+    <Content Include="Assets\images\logo_01.png" />
+    <Content Include="Assets\images\logo_02.png" />
+    <Content Include="Assets\images\logo_03.png" />
+    <Content Include="Assets\images\logo_04.png" />
+    <Content Include="Assets\images\logo_05.png" />
+    <Content Include="Assets\images\logo_06.png" />
+    <Content Include="Assets\images\parallax_02.jpg" />
+    <Content Include="Assets\images\parallax_02.png" />
+    <Content Include="Assets\images\parallax_03.jpg" />
+    <Content Include="Assets\images\parallax_04.jpg" />
+    <Content Include="Assets\images\parallax_05.png" />
+    <Content Include="Assets\images\parallax_17.jpg" />
+    <Content Include="Assets\images\phonebg.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Assets\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Assets\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Assets\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Assets\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Assets\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Assets\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Assets\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Assets\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Assets\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Assets\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Assets\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Assets\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Assets\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Assets\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Assets\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Assets\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Assets\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Assets\images\search-icon.png" />
+    <Content Include="Assets\images\slider-01.jpg" />
+    <Content Include="Assets\images\slider-02.jpg" />
+    <Content Include="Assets\images\slider-03.jpg" />
+    <Content Include="Assets\images\team-01.png" />
+    <Content Include="Assets\images\team-02.png" />
+    <Content Include="Assets\images\team-03.png" />
+    <Content Include="Assets\images\team-04.png" />
+    <Content Include="Assets\images\testi_01.png" />
+    <Content Include="Assets\images\testi_02.png" />
+    <Content Include="Assets\images\testi_03.png" />
+    <Content Include="Assets\images\version_soon.jpg" />
+    <Content Include="Assets\images\world-map.png" />
+    <Content Include="Assets\js\01-custom-places-example.js" />
+    <Content Include="Assets\js\all.js" />
+    <Content Include="Assets\js\animate.js" />
+    <Content Include="Assets\js\bootstrap-touch-slider.js" />
     <Content Include="Assets\js\bootstrap.min.js" />
-    <Content Include="Assets\js\google-map.js" />
-    <Content Include="Assets\js\jquery-3.2.1.min.js" />
-    <Content Include="Assets\js\jquery-migrate-3.0.1.min.js" />
-    <Content Include="Assets\js\jquery.animateNumber.min.js" />
-    <Content Include="Assets\js\jquery.easing.1.3.js" />
-    <Content Include="Assets\js\jquery.magnific-popup.min.js" />
-    <Content Include="Assets\js\jquery.min.js" />
-    <Content Include="Assets\js\jquery.stellar.min.js" />
-    <Content Include="Assets\js\jquery.waypoints.min.js" />
-    <Content Include="Assets\js\main.js" />
-    <Content Include="Assets\js\owl.carousel.min.js" />
-    <Content Include="Assets\js\popper.min.js" />
-    <Content Include="Assets\js\range.js" />
-    <Content Include="Assets\js\scrollax.min.js" />
+    <Content Include="Assets\js\custom.js" />
+    <Content Include="Assets\js\hoverdir.js" />
+    <Content Include="Assets\js\jquery.prettyPhoto.js" />
+    <Content Include="Assets\js\jquery.vide.js" />
+    <Content Include="Assets\js\map.js" />
+    <Content Include="Assets\js\mapsed.js" />
+    <Content Include="Assets\js\modernizer.js" />
+    <Content Include="Assets\js\owl.carousel.js" />
+    <Content Include="Assets\js\portfolio.js" />
+    <Content Include="Assets\js\retina.js" />
+    <Content Include="Assets\js\scroll.js" />
+    <Content Include="Assets\js\timeline.min.js" />
+    <Content Include="Assets\style.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -182,15 +243,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Courses.Context.tt">
+    <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Courses.edmx</DependentUpon>
-      <LastGenOutput>Courses.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Courses.tt">
+    <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Courses.edmx</DependentUpon>
-      <LastGenOutput>Courses.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -198,63 +259,86 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ASSIGNMENTS.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+    <Compile Include="Models\ARTICLE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CART_OF_USER.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COMMENT_LESSON.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\COURSE.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Courses.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Courses.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Courses.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Courses.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Courses.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Courses.edmx</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FEEDBACK.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\GIANGVIEN.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GRADES.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LESSON.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ORDER_COURSE.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QUIZZES.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+    <Compile Include="Models\TEACHER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TYPE_COURSE.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USER_COURSE.cs">
-      <DependentUpon>Courses.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\LoginVM.cs" />
+    <Compile Include="ViewModel\RegisterVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -274,117 +358,18 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\Courses.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Courses.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Courses.edmx.diagram">
-      <DependentUpon>Courses.edmx</DependentUpon>
-    </Content>
-    <Content Include="Assets\css\.DS_Store" />
-    <Content Include="Assets\fonts\.DS_Store" />
-    <Content Include="Assets\fonts\flaticon\.DS_Store" />
-    <Content Include="Assets\fonts\flaticon\font\Flaticon.eot" />
-    <Content Include="Assets\fonts\flaticon\font\Flaticon.ttf" />
-    <Content Include="Assets\fonts\flaticon\font\Flaticon.woff" />
-    <Content Include="Assets\fonts\flaticon\font\Flaticon.woff2" />
-    <Content Include="Assets\fonts\flaticon\font\_flaticon.scss" />
-    <Content Include="Assets\fonts\flaticon\license\license.pdf" />
-    <Content Include="Assets\images\.DS_Store" />
-    <Content Include="Assets\js\.DS_Store" />
-    <Content Include="Assets\scss\.DS_Store" />
-    <Content Include="Assets\scss\bootstrap\.DS_Store" />
-    <Content Include="Assets\scss\bootstrap\bootstrap-grid.scss" />
-    <Content Include="Assets\scss\bootstrap\bootstrap-reboot.scss" />
-    <Content Include="Assets\scss\bootstrap\bootstrap.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_alert.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_background-variant.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_badge.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_border-radius.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_box-shadow.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_breakpoints.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_buttons.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_caret.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_clearfix.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_deprecate.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_float.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_forms.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_gradients.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_grid-framework.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_grid.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_hover.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_image.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_list-group.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_lists.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_nav-divider.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_pagination.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_reset-text.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_resize.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_screen-reader.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_size.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_table-row.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_text-emphasis.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_text-hide.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_text-truncate.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_transition.scss" />
-    <Content Include="Assets\scss\bootstrap\mixins\_visibility.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_align.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_background.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_borders.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_clearfix.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_display.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_embed.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_flex.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_float.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_interactions.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_overflow.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_position.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_screenreaders.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_shadows.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_sizing.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_spacing.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_stretched-link.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_text.scss" />
-    <Content Include="Assets\scss\bootstrap\utilities\_visibility.scss" />
-    <Content Include="Assets\scss\bootstrap\vendor\_rfs.scss" />
-    <Content Include="Assets\scss\bootstrap\_alert.scss" />
-    <Content Include="Assets\scss\bootstrap\_badge.scss" />
-    <Content Include="Assets\scss\bootstrap\_breadcrumb.scss" />
-    <Content Include="Assets\scss\bootstrap\_button-group.scss" />
-    <Content Include="Assets\scss\bootstrap\_buttons.scss" />
-    <Content Include="Assets\scss\bootstrap\_card.scss" />
-    <Content Include="Assets\scss\bootstrap\_carousel.scss" />
-    <Content Include="Assets\scss\bootstrap\_close.scss" />
-    <Content Include="Assets\scss\bootstrap\_code.scss" />
-    <Content Include="Assets\scss\bootstrap\_custom-forms.scss" />
-    <Content Include="Assets\scss\bootstrap\_dropdown.scss" />
-    <Content Include="Assets\scss\bootstrap\_forms.scss" />
-    <Content Include="Assets\scss\bootstrap\_functions.scss" />
-    <Content Include="Assets\scss\bootstrap\_grid.scss" />
-    <Content Include="Assets\scss\bootstrap\_images.scss" />
-    <Content Include="Assets\scss\bootstrap\_input-group.scss" />
-    <Content Include="Assets\scss\bootstrap\_jumbotron.scss" />
-    <Content Include="Assets\scss\bootstrap\_list-group.scss" />
-    <Content Include="Assets\scss\bootstrap\_media.scss" />
-    <Content Include="Assets\scss\bootstrap\_mixins.scss" />
-    <Content Include="Assets\scss\bootstrap\_modal.scss" />
-    <Content Include="Assets\scss\bootstrap\_nav.scss" />
-    <Content Include="Assets\scss\bootstrap\_navbar.scss" />
-    <Content Include="Assets\scss\bootstrap\_pagination.scss" />
-    <Content Include="Assets\scss\bootstrap\_popover.scss" />
-    <Content Include="Assets\scss\bootstrap\_print.scss" />
-    <Content Include="Assets\scss\bootstrap\_progress.scss" />
-    <Content Include="Assets\scss\bootstrap\_reboot.scss" />
-    <Content Include="Assets\scss\bootstrap\_root.scss" />
-    <Content Include="Assets\scss\bootstrap\_spinners.scss" />
-    <Content Include="Assets\scss\bootstrap\_tables.scss" />
-    <Content Include="Assets\scss\bootstrap\_toasts.scss" />
-    <Content Include="Assets\scss\bootstrap\_tooltip.scss" />
-    <Content Include="Assets\scss\bootstrap\_transitions.scss" />
-    <Content Include="Assets\scss\bootstrap\_type.scss" />
-    <Content Include="Assets\scss\bootstrap\_utilities.scss" />
-    <Content Include="Assets\scss\bootstrap\_variables.scss" />
-    <Content Include="Assets\scss\style.scss" />
+    <Content Include="Assets\fonts\Flaticon.eot" />
+    <Content Include="Assets\fonts\Flaticon.ttf" />
+    <Content Include="Assets\fonts\Flaticon.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -392,11 +377,16 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Views\Shared\_LayoutPage.cshtml" />
-    <Content Include="Views\Shared\Footer.cshtml" />
-    <Content Include="Views\Shared\Nav.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="studylab-main.zip" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Course\Detail.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Teacher\Detail.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -406,6 +396,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Type_Course\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -15,7 +15,7 @@ namespace QL_KhoaHocOnl.Models
     public partial class QUIZZES
     {
         public string QUIZID { get; set; }
-        public string MA_COURSE { get; set; }
+        public string ID_COURSE { get; set; }
         public string TITLE_QUIZID { get; set; }
         public string DESCRIPTION_QUIZID { get; set; }
         public Nullable<System.DateTime> DUEDATE_QUIZ { get; set; }

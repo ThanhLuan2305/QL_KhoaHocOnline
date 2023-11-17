@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QL_KhoaHocOnl.Models.COURSE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="all-title-box">
+    <div class="container text-center">
+        <h1>Course Grid 3<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+    </div>
+</div>
+<div id="overviews" class="section wb">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="col-md-8 offset-md-2">
+                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+            </div>
+        </div><!-- end title -->
+
+        <hr class="invis">
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="course-item">
+                        <div class="image-blog">
+                            @*@Html.DisplayFor(modelItem => item.THUMBNAIL)*@
+                            <img src="~/Assets/images/blog_1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="course-br ">
+                            <div class="course-title">
+                                <h2>
+                                    @Html.ActionLink(item.NAME_COURSE, "Detail", new { id = item.ID_COURSE })
+                                </h2>
+                            </div>
+                            <div class="course-desc">
+                                @if (item.DESCRIPTION_COURSE.Length > 90)
+                                {
+                                    <p>@item.DESCRIPTION_COURSE.Substring(0, 88)...</p>
+                                }
+                                else
+                                {
+                                    <p>@item.DESCRIPTION_COURSE</p>
+                                }
+                            </div>
+                        </div>
+                        <div class="course-meta-bot">
+                            <p class="text align-content-center">@Html.DisplayFor(modelItem => item.PRICE_COURSE) VND</p>
+                        </div>
+                    </div>
+                </div><!-- end col -->
+            }
+        </div><!-- end row -->
+        <hr class="hr3">
+
+        @*@Html.DisplayFor(modelItem => item.DESCRIPTION_COURSE)
+            @Html.DisplayFor(modelItem => item.STATUS_COURSE)
+            @Html.DisplayFor(modelItem => item.THUMBNAIL)
+            @Html.DisplayFor(modelItem => item.COUNT_LESSON_COURSE)
+            @Html.DisplayFor(modelItem => item.LEVEL_COURSE)
+            @Html.DisplayFor(modelItem => item.CREATED_AT_COURSE)
+            @Html.DisplayFor(modelItem => item.UPDATE_AT_COURSE)*@
+    </div><!-- end container -->
+</div><!-- end section -->
