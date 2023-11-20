@@ -19,11 +19,20 @@
                     <li class="nav-item"><a class="nav-link" href="cart.html">Giỏ hàng</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">   
-                        <a class="nav-link" href="/account/login">Đăng nhập</a>
+                    <li class="nav-item">
+                        <form class="d-flex flex-row flex-wrap"
+                              action="/course/index">
+                            <input type="search"
+                                   class="form-control w-auto"
+                                   id="search"
+                                   name="search"
+                                   value="@ViewBag.TB"
+                                   placeholder="Search" />
+                            <button type="submit" class="btn btn-primary mx-2">Search</button>
+                        </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account/register">Đăng ký</a>
+                        <a class="nav-link" href="/account/login">Đăng nhập</a>
                     </li>
                 </ul>
             </div>

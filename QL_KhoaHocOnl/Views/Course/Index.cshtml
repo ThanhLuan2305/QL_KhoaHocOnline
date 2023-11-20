@@ -17,9 +17,19 @@
                 <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
             </div>
         </div><!-- end title -->
-
-        <hr class="invis">
-
+        <div>
+        </div>
+        <div class="sort mb-2">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sắp xếp
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item course-title" style="color:black !important"  href="/course/index?Sort=Up">Giá tăng dần</a></li>
+                    <li><a class="dropdown-item course-title" style="color:black !important" href="/course/index?Sort=Down">Giá giẩm dần</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             @foreach (var item in Model)
             {
@@ -53,14 +63,58 @@
                 </div><!-- end col -->
             }
         </div><!-- end row -->
-        <hr class="hr3">
+        <div style="width:50%; margin:20px auto;text-align:center">
+            @{
+                int PrevPage = ViewBag.Page - 1;
+                if (PrevPage <= 0)
+                {
+                    PrevPage = 1;
+                }
+                int NextPage = ViewBag.Page + 1;
+                if (NextPage > ViewBag.NoOfPages)
+                {
+                    NextPage = ViewBag.NoOfPages;
+                }
+            }
+            <ul class="pagination justify-content-center align-items-center">
+                <li class="page-item">
+                    <a class="page-link" href="/course/index?Sort=@ViewBag.Sort&page=@PrevPage">
+                        «
+                    </a>
+                </li>
+                @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                {
+                    if (i + 1 == ViewBag.Page)
+                    {
+                        <li class="page-item active">
+                            <a class="page-link" href="/course/index?Sort=@ViewBag.Sort&page=@(i+1)">
+                                @(i+1)
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="/course/index?Sort=@ViewBag.Sort&page=@(i+1)">
+                                @(i+1)
+                            </a>
+                        </li>
+                    }
 
+                }
+                <li class="page-item">
+                    <a class="page-link" href="/course/index?Sort=@ViewBag.Sort&page=@NextPage">
+                        »
+                    </a>
+                </li>
+            </ul>
+        </div>
         @*@Html.DisplayFor(modelItem => item.DESCRIPTION_COURSE)
-            @Html.DisplayFor(modelItem => item.STATUS_COURSE)
-            @Html.DisplayFor(modelItem => item.THUMBNAIL)
-            @Html.DisplayFor(modelItem => item.COUNT_LESSON_COURSE)
-            @Html.DisplayFor(modelItem => item.LEVEL_COURSE)
-            @Html.DisplayFor(modelItem => item.CREATED_AT_COURSE)
-            @Html.DisplayFor(modelItem => item.UPDATE_AT_COURSE)*@
+        @Html.DisplayFor(modelItem => item.STATUS_COURSE)
+        @Html.DisplayFor(modelItem => item.THUMBNAIL)
+        @Html.DisplayFor(modelItem => item.COUNT_LESSON_COURSE)
+        @Html.DisplayFor(modelItem => item.LEVEL_COURSE)
+        @Html.DisplayFor(modelItem => item.CREATED_AT_COURSE)
+        @Html.DisplayFor(modelItem => item.UPDATE_AT_COURSE)*@
     </div><!-- end container -->
 </div><!-- end section -->

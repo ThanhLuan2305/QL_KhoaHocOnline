@@ -3864,9 +3864,12 @@ a.link-style3 {
 .course-meta-bot ul li:hover{
 	color: #eea412;
 }
-
-
-
+.aHover a{
+    color: black !important;
+}
+.aHover a:hover {
+    color: blue;
+}
 
 
 
