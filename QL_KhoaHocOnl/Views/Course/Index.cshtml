@@ -4,6 +4,21 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
+<style>
+    p {
+        margin: 0 !important;
+        margin-bottom:5px ;
+    }
+    span {
+        font-weight:500;
+    }
+    .fixmargin {
+        margin: 0 !important;
+    }
+    h2 {
+        margin: 5px 0 !important
+    }
+</style>
 
 <div class="all-title-box">
     <div class="container text-center">
@@ -14,7 +29,7 @@
     <div class="container">
         <div class="section-title row text-center">
             <div class="col-md-8 offset-md-2">
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                <p class="lead">Ở đây có rất nhiều khóa học hay cho bạn khám phá!</p>
             </div>
         </div><!-- end title -->
         <div>
@@ -36,11 +51,10 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <div class="course-item">
                         <div class="image-blog">
-                            @*@Html.DisplayFor(modelItem => item.THUMBNAIL)*@
                             <img src="~/Assets/images/blog_1.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="course-br ">
-                            <div class="course-title">
+                            <div class="course-title" >
                                 <h2>
                                     @Html.ActionLink(item.NAME_COURSE, "Detail", new { id = item.ID_COURSE })
                                 </h2>
@@ -52,12 +66,33 @@
                                 }
                                 else
                                 {
-                                    <p>@item.DESCRIPTION_COURSE</p>
+                                    <p style="height:50px">@item.DESCRIPTION_COURSE</p>
                                 }
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p> Cấp độ: <span class="text-primary">@item.LEVEL_COURSE</span></p>
+                                </div>
+                                <div class="col-6">
+                                    @if (@item.STATUS_COURSE == "ACTIVE")
+                                    {
+                                        <p>Tình trạng: <span class="text-success">@item.STATUS_COURSE</span> </p>
+                                    }
+                                    else
+                                    {
+                                        <p>Tình trạng: <span class="text-danger">@item.STATUS_COURSE</span> </p>
+                                    }
+                                </div>
                             </div>
                         </div>
                         <div class="course-meta-bot">
-                            <p class="text align-content-center">@Html.DisplayFor(modelItem => item.PRICE_COURSE) VND</p>
+                            <div class="row">
+                                <div class="col-6" style="text-align:center; margin:0 !important;"><p>
+                                    @Html.DisplayFor(modelItem => item.PRICE_COURSE, new { @class = "fixmargin" }) VND</p></div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-success">Thêm giỏ hàng</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div><!-- end col -->
@@ -109,9 +144,8 @@
                 </li>
             </ul>
         </div>
-        @*@Html.DisplayFor(modelItem => item.DESCRIPTION_COURSE)
+        @*
         @Html.DisplayFor(modelItem => item.STATUS_COURSE)
-        @Html.DisplayFor(modelItem => item.THUMBNAIL)
         @Html.DisplayFor(modelItem => item.COUNT_LESSON_COURSE)
         @Html.DisplayFor(modelItem => item.LEVEL_COURSE)
         @Html.DisplayFor(modelItem => item.CREATED_AT_COURSE)
