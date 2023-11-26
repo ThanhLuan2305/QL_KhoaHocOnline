@@ -22,18 +22,11 @@
 
 <div class="all-title-box">
     <div class="container text-center">
-        <h1>Course Grid 3<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+        <h1>Khóa học<span class="m_1">Ở đây có rất nhiều khóa học hay cho bạn khám phá!</span></h1>
     </div>
 </div>
 <div id="overviews" class="section wb">
-    <div class="container">
-        <div class="section-title row text-center">
-            <div class="col-md-8 offset-md-2">
-                <p class="lead">Ở đây có rất nhiều khóa học hay cho bạn khám phá!</p>
-            </div>
-        </div><!-- end title -->
-        <div>
-        </div>
+    <div class="container" style="padding:0 5rem;">
         <div class="sort mb-2">
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,18 +44,16 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <div class="course-item">
                         <div class="image-blog">
-                            <img src="~/Assets/images/blog_1.jpg" alt="" class="img-fluid">
+                            <img style="width:500px; height: 400px;" src="~/Assets/images/@item.THUMBNAIL" alt="" class="img-fluid object-fit-cover">
                         </div>
-                        <div class="course-br ">
-                            <div class="course-title" >
-                                <h2>
-                                    @Html.ActionLink(item.NAME_COURSE, "Detail", new { id = item.ID_COURSE })
-                                </h2>
+                        <div class="course-br " style="padding-top :0; ">
+                            <div class="course-title" style="height:70px">
+                                <h2>@Html.ActionLink(item.NAME_COURSE, "Detail", new { id = item.ID_COURSE })</h2>
                             </div>
                             <div class="course-desc">
                                 @if (item.DESCRIPTION_COURSE.Length > 90)
                                 {
-                                    <p>@item.DESCRIPTION_COURSE.Substring(0, 88)...</p>
+                                    <p>@item.DESCRIPTION_COURSE.Substring(0, 86)...</p>
                                 }
                                 else
                                 {
@@ -71,7 +62,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <p> Cấp độ: <span class="text-primary">@item.LEVEL_COURSE</span></p>
+                                    <p> Cấp: <span class="text-primary">@item.LEVEL_COURSE</span></p>
                                 </div>
                                 <div class="col-6">
                                     @if (@item.STATUS_COURSE == "ACTIVE")

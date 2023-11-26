@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 <div class="all-title-box">
-    <div class="container text-center">
+    <div class="container text-center" style="padding:0 7rem;">
         <h1>Teachers<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
     </div>
 </div>
 <div id="teachers" class="section wb">
-    <div class="container">
+    <div class="container" style="padding:0 7rem;">
         <div class="row">
             @foreach (var item in Model)
             {
@@ -18,7 +18,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="our-team">
                         <div class="team-img">
-                            <img style="height:20rem" src="~/Assets/images/@item.THUMBNAIL">
+                            <img class="object-fit-cover" style="height:20rem" src="~/Assets/images/@item.THUMBNAIL">
                             @*@Html.DisplayFor(modelItem => item.THUMBNAIL)*@
                             <div class="social">
                                 <ul>

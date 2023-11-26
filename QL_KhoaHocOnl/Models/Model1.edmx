@@ -83,6 +83,8 @@
           <Property Name="ID_COURSE" Type="varchar" MaxLength="56" Nullable="false" />
           <Property Name="TITLE_LESSON" Type="nvarchar" MaxLength="64" Nullable="false" />
           <Property Name="DESCRIPTION_LESSON" Type="nvarchar" MaxLength="256" />
+          <Property Name="STATUS_LESSON" Type="nvarchar" MaxLength="256" />
+          <Property Name="SESSION_LESSON" Type="int" />
           <Property Name="THUMBNAIL" Type="varchar" MaxLength="64" />
           <Property Name="LINK_LESSON" Type="nvarchar" MaxLength="256" />
           <Property Name="CREATED_AT" Type="datetime" />
@@ -166,6 +168,18 @@
             </Principal>
             <Dependent Role="CART_OF_USER">
               <PropertyRef Name="ID_USER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CM_LS">
+          <End Role="LESSON" Type="Self.LESSON" Multiplicity="1" />
+          <End Role="COMMENT_LESSON" Type="Self.COMMENT_LESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LESSON">
+              <PropertyRef Name="ID_LESSON" />
+            </Principal>
+            <Dependent Role="COMMENT_LESSON">
+              <PropertyRef Name="ID_LESSON" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -298,6 +312,10 @@
             <End Role="USER_COURSE" EntitySet="USER_COURSE" />
             <End Role="CART_OF_USER" EntitySet="CART_OF_USER" />
           </AssociationSet>
+          <AssociationSet Name="FK_CM_LS" Association="Self.FK_CM_LS">
+            <End Role="LESSON" EntitySet="LESSON" />
+            <End Role="COMMENT_LESSON" EntitySet="COMMENT_LESSON" />
+          </AssociationSet>
           <AssociationSet Name="FK_COURSE_TEACHER" Association="Self.FK_COURSE_TEACHER">
             <End Role="TEACHER" EntitySet="TEACHER" />
             <End Role="COURSE" EntitySet="COURSE" />
@@ -372,6 +390,7 @@
           <Property Name="ID_LESSON" Type="String" MaxLength="56" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CONTENT" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CREATED_AT" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="LESSON" Relationship="Self.FK_CM_LS" FromRole="COMMENT_LESSON" ToRole="LESSON" />
         </EntityType>
         <EntityType Name="COURSE">
           <Key>
@@ -429,10 +448,13 @@
           <Property Name="ID_COURSE" Type="String" MaxLength="56" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TITLE_LESSON" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DESCRIPTION_LESSON" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS_LESSON" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SESSION_LESSON" Type="Int32" />
           <Property Name="THUMBNAIL" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
           <Property Name="LINK_LESSON" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="CREATED_AT" Type="DateTime" Precision="3" />
           <Property Name="UPDATED_AT" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="COMMENT_LESSON" Relationship="Self.FK_CM_LS" FromRole="LESSON" ToRole="COMMENT_LESSON" />
           <NavigationProperty Name="COURSE" Relationship="Self.FK_LESSON_COURSE" FromRole="LESSON" ToRole="COURSE" />
         </EntityType>
         <EntityType Name="ORDER_COURSE">
@@ -523,6 +545,18 @@
             </Principal>
             <Dependent Role="CART_OF_USER">
               <PropertyRef Name="ID_USER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CM_LS">
+          <End Role="LESSON" Type="Self.LESSON" Multiplicity="1" />
+          <End Role="COMMENT_LESSON" Type="Self.COMMENT_LESSON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LESSON">
+              <PropertyRef Name="ID_LESSON" />
+            </Principal>
+            <Dependent Role="COMMENT_LESSON">
+              <PropertyRef Name="ID_LESSON" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -655,6 +689,10 @@
             <End Role="USER_COURSE" EntitySet="USER_COURSE" />
             <End Role="CART_OF_USER" EntitySet="CART_OF_USER" />
           </AssociationSet>
+          <AssociationSet Name="FK_CM_LS" Association="Self.FK_CM_LS">
+            <End Role="LESSON" EntitySet="LESSON" />
+            <End Role="COMMENT_LESSON" EntitySet="COMMENT_LESSON" />
+          </AssociationSet>
           <AssociationSet Name="FK_COURSE_TEACHER" Association="Self.FK_COURSE_TEACHER">
             <End Role="TEACHER" EntitySet="TEACHER" />
             <End Role="COURSE" EntitySet="COURSE" />
@@ -780,6 +818,8 @@
                 <ScalarProperty Name="ID_COURSE" ColumnName="ID_COURSE" />
                 <ScalarProperty Name="TITLE_LESSON" ColumnName="TITLE_LESSON" />
                 <ScalarProperty Name="DESCRIPTION_LESSON" ColumnName="DESCRIPTION_LESSON" />
+                <ScalarProperty Name="STATUS_LESSON" ColumnName="STATUS_LESSON" />
+                <ScalarProperty Name="SESSION_LESSON" ColumnName="SESSION_LESSON" />
                 <ScalarProperty Name="THUMBNAIL" ColumnName="THUMBNAIL" />
                 <ScalarProperty Name="LINK_LESSON" ColumnName="LINK_LESSON" />
                 <ScalarProperty Name="CREATED_AT" ColumnName="CREATED_AT" />

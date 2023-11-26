@@ -14,15 +14,25 @@ namespace QL_KhoaHocOnl.Models
     
     public partial class LESSON
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LESSON()
+        {
+            this.COMMENT_LESSON = new HashSet<COMMENT_LESSON>();
+        }
+    
         public string ID_LESSON { get; set; }
         public string ID_COURSE { get; set; }
         public string TITLE_LESSON { get; set; }
         public string DESCRIPTION_LESSON { get; set; }
+        public string STATUS_LESSON { get; set; }
+        public Nullable<int> SESSION_LESSON { get; set; }
         public string THUMBNAIL { get; set; }
         public string LINK_LESSON { get; set; }
         public Nullable<System.DateTime> CREATED_AT { get; set; }
         public Nullable<System.DateTime> UPDATED_AT { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<COMMENT_LESSON> COMMENT_LESSON { get; set; }
         public virtual COURSE COURSE { get; set; }
     }
 }

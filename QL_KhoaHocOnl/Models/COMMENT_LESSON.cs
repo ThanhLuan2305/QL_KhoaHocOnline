@@ -18,5 +18,7 @@ namespace QL_KhoaHocOnl.Models
         public string ID_LESSON { get; set; }
         public string CONTENT { get; set; }
         public Nullable<System.DateTime> CREATED_AT { get; set; }
+    
+        public virtual LESSON LESSON { get; set; }
     }
 }
